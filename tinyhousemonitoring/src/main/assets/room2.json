@@ -1,0 +1,62 @@
+{
+  "connectors": [
+       {
+      "systemID": "XIAOMI_GW",
+      "type": "XIAOMI_CONNECTOR",
+      "settings": {
+        "mac":"4C:65:A8:DF:75:E8"
+      }
+    },
+    {
+      "systemID": "HGW1",
+      "type": "HUE_CONNECTOR",
+      "settings": {
+        "ip":"192.168.42.2",
+        "authID":"Lz5Nnc7kQxeW2MxRg2Rw86sspr1wIcCOfUN1FdJb"
+      }
+    }
+ ],
+ "components": [
+   {
+     "componentName": "Room",
+      "devices": [
+
+        {
+          "type": "temperature_sensor",
+          "model": "XIAOMI",
+          "systemID": "TEMP1",
+          "settings": {
+          },
+          "connector": "XIAOMI_GW"
+        },
+        {
+          "type": "humidity_sensor",
+          "model": "XIAOMI",
+          "systemID": "HUM1",
+          "settings": {
+          },
+          "connector": "XIAOMI_GW"
+        },
+
+        {
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:dc:2f:97-0b"
+          },
+          "connector": "HGW1"
+        },
+        {
+          "type": "fireplace",
+          "model": "HUE",
+          "systemID": "FP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:ac:76:9a-0b"
+          },
+          "connector": "HGW1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "connectors": [
+    {
+      "systemID": "POLAR_GW",
+      "type": "POLAR_H7_CONNECTOR",
+      "settings": {
+        "mac":"A0:9E:1A:3B:37:60"
+      }
+    },
+    {
+      "systemID": "ATT1",
+      "type": "ATT_CONNECTOR",
+      "settings": {
+        "address": "https://smiot.allthingstalk.io",
+        "username":"IotMsec",
+        "password":"1nternetOfThings",
+        "client":"web",
+        "deviceToken":"smiot:4GKXSET2WuDzG0lqFwHO5yloZ4L1HicEASHsQI7"
+      }
+    },
+    {
+      "systemID": "HGW1",
+      "type": "HUE_CONNECTOR",
+      "settings": {
+        "ip":"192.168.42.2",
+        "authID":"Lz5Nnc7kQxeW2MxRg2Rw86sspr1wIcCOfUN1FdJb"
+      }
+    }
+  ],
+  "components": [
+    {
+      "componentName": "Room",
+      "devices": [
+        {
+          "type": "temperature_sensor",
+          "model": "ATT",
+          "systemID": "TEMP1",
+          "settings": {
+            "uniqueID":"Scda4XZgEgRzSAncrSJ2lS3N"
+          },
+          "connector": "ATT1"
+        },
+        {
+          "type": "humidity_sensor",
+          "model": "ATT",
+          "systemID": "HUM1",
+          "settings": {
+            "uniqueID":"XeqcapCnMMAXwhypLh5CYwHc"
+          },
+          "connector": "ATT1"
+        },
+        {
+          "type": "heartrate_sensor",
+          "model": "POLARH7",
+          "systemID": "HR1",
+          "settings": {
+          },
+          "connector": "POLAR_GW"
+        },
+        {
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:3c:f5:2c-0b"
+          },
+          "connector": "HGW1"
+        }
+      ]
+    }
+  ]
+}

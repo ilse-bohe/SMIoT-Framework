@@ -1,0 +1,89 @@
+{
+  "connectors": [
+    {
+      "systemID": "DG1",
+      "type": "DRAMCO_CONNECTOR",
+      "settings": {
+        "address":"192.168.42.8"
+      }
+    },
+    {
+      "systemID": "POLAR_GW",
+      "type": "POLAR_H7_CONNECTOR",
+      "settings": {
+        "mac":"A0:9E:1A:3B:37:60"
+      }
+    },
+    {
+      "systemID": "ATT1",
+      "type": "ATT_CONNECTOR",
+      "settings": {
+        "address": "https://smiot.allthingstalk.io",
+        "username":"IotMsec",
+        "password":"1nternetOfThings",
+        "client":"web",
+        "deviceToken":"smiot:4GKXSET2WuDzG0lqFwHO5yloZ4L1HicEASHsQI7"
+      }
+    }
+  ],
+  "components": [
+    {
+      "componentName": "Room",
+      "devices": [
+        {
+          "type": "lock",
+          "model": "DRAMCO",
+          "systemID": "DL1",
+          "settings": {
+            "id":"doorlock-10cb"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "fireplace",
+          "model": "DRAMCO",
+          "systemID": "FP1",
+          "settings": {
+            "id":"fireplace-f17e"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "co2_sensor",
+          "model": "DRAMCO",
+          "systemID": "CO2_1",
+          "settings": {
+            "id":"co2sensor-0c02"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "temperature_sensor",
+          "model": "ATT",
+          "systemID": "TEMP1",
+          "settings": {
+            "uniqueID":"Scda4XZgEgRzSAncrSJ2lS3N"
+          },
+          "connector": "ATT1"
+        },
+        {
+          "type": "humidity_sensor",
+          "model": "ATT",
+          "systemID": "HUM1",
+          "settings": {
+            "uniqueID":"XeqcapCnMMAXwhypLh5CYwHc"
+          },
+          "connector": "ATT1"
+        },
+        {
+          "type": "heartrate_sensor",
+          "model": "POLARH7",
+          "systemID": "HR1",
+          "settings": {
+          },
+          "connector": "POLAR_GW"
+        }
+      ]
+    }
+  ]
+}

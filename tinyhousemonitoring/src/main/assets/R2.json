@@ -1,0 +1,99 @@
+{
+  "connectors": [
+    {
+      "systemID": "DG1",
+      "type": "DRAMCO_CONNECTOR",
+      "settings": {
+        "address":"192.168.42.8"
+      }
+    },
+    {
+      "systemID": "VS1",
+      "type": "VS_CONNECTOR",
+      "settings": {
+        "address": "https://gateway.versasense.com:8889"
+      }
+    },
+    {
+      "systemID": "HGW1",
+      "type": "HUE_CONNECTOR",
+      "settings": {
+        "ip":"192.168.42.5",
+        "authID":"79Ofh77renbcL6HnaaWNx9b5ZqmO3i6a4bzkU4-8"
+      }
+    }
+ ],
+ "components": [
+   {
+     "componentName": "Room",
+      "devices": [
+
+        {
+          "type": "color_sensor",
+          "model": "DRAMCO",
+          "systemID": "CS1",
+          "settings": {
+            "id":"colorsensor-8421"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "button",
+          "model": "DRAMCO",
+          "systemID": "B1",
+          "settings": {
+            "id":"button-9b65"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "curtains",
+          "model": "DRAMCO",
+          "systemID": "CURT1",
+          "settings": {
+            "id":"curtains-09e4"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "light_sensor",
+          "model": "DRAMCO",
+          "systemID": "LS1",
+          "settings": {
+            "id":"luxsensor-4f23"
+          },
+          "connector": "DG1"
+        },
+        {
+          "type": "humidity_sensor",
+          "model": "VS",
+          "systemID": "HUM11",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-A7",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+        {
+          "type": "temperature_sensor",
+          "model": "VS",
+          "systemID": "TEMP1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-A7",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+        {
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:04:d2:9f:bb-0b"
+          },
+          "connector": "HGW1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "connectors": [
+    {
+      "systemID": "VS1",
+      "type": "VS_CONNECTOR",
+      "settings": {
+        "address": "https://gateway.versasense.com:8889"
+      }
+    }
+  ],
+  "components": [
+    {
+      "componentName": "Room",
+      "devices": [
+        {
+          "type": "humidity_sensor",
+          "model": "VS",
+          "systemID": "HUM11",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+        {
+          "type": "temperature_sensor",
+          "model": "VS",
+          "systemID": "TEMP1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+
+        {
+          "type": "light_sensor",
+          "model": "VS",
+          "systemID": "LIGHT1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "9803/9805"
+          },
+          "connector": "VS1"
+        }
+      ]
+    }
+  ]
+}

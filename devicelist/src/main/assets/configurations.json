@@ -1,0 +1,74 @@
+{
+  "connectors": [
+    {
+      "systemID": "VS1",
+      "type": "VS_CONNECTOR",
+      "settings": {
+        "address": "https://gateway.versasense.com:8889"
+      }
+    },
+    {
+      "systemID": "HGW1",
+      "type": "HUE_CONNECTOR",
+      "settings": {
+        "ip":"192.168.42.2",
+        "authID":"Lz5Nnc7kQxeW2MxRg2Rw86sspr1wIcCOfUN1FdJb"
+      }
+    }
+  ],
+  "components": [
+    {
+      "componentName": "DevicePool",
+      "devices": [
+        {
+          "type": "humidity_sensor",
+          "model": "VS",
+          "systemID": "HUM11",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+        {
+          "type": "temperature_sensor",
+          "model": "VS",
+          "systemID": "TEMP1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+
+        {
+          "type": "light_sensor",
+          "model": "VS",
+          "systemID": "LIGHT1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-62",
+            "identifier" : "9803/9805"
+          },
+          "connector": "VS1"
+        },
+        {
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:3c:f5:2c-0b"
+          },
+          "connector": "HGW1"
+        },{
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP2",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:dc:2f:97-0b"
+          },
+          "connector": "HGW1"
+        }
+      ]
+    }
+  ]
+}

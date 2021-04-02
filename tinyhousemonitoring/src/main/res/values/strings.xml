@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tiny House Monitoring</string>
+    <string name="title_home">Home</string>
+    <string name="title_health">Health</string>
+    <string name="title_change_room">Switch Room</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_values">tinyhousemonitoring_values</string>
+    <string name="room_id">room_id</string>
+    <string name="degrees_celsius">°C</string>
+    <string name="percentage">%</string>
+    <string name="lux">lux</string>
+    <string name="ppm">ppm</string>
+</resources>
